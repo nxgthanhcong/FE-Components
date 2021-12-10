@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7db892;
+}
+
+body {
+    height: 100vh;
+    background: #f8f9fa; /* fallback for old browsers */
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ribbon-card {
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.ribbon {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    /* background-color: #f00; */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ribbon::before {
+    content: "SALEOFF 99%";
+    position: absolute;
+    background-color: rosybrown;
+    width: 200%;
+    height: 25px;
+    transform: rotate(-45deg) translateY(-12px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.ribbon::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: rgb(71, 45, 45);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 135px -135px rgb(71, 45, 45);
+}

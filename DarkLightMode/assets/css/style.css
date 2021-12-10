@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7db892;
+}
+
+body {
+    background: #232427; /* fallback for old browsers */
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 100px 0 50px;
+}
+
+.container .card {
+    position: relative;
+    min-width: 320px;
+    height: 500px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 0 20px;
+}
+
+.container .card .box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    background-color: #2a2b2f;
+    border-radius: 15px;
+    border: 2px solid #1e1f23;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.container .card:hover .box {
+    transform: translateY(-30px);
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
+
+.container .card .box .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .box .content .icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--clr);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.container .card .box .content .icon i {
+    font-size: 2em;
+    color: #fff;
+}
+
+.container .card .box .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .card .box .content h4 {
+    font-size: 3em;
+    color: #fff;
+    font-weight: 700;
+}
+
+.container .card .box .content h4 sup {
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.container .card .box .content ul {
+    color: #fff;
+    list-style: none;
+}
+
+.container .card .box .content ul li {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.container .card .box .content a {
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+    border-radius: 30px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.4s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+
+.control {
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.control::before {
+    content: "\f185";
+    font-family: fontAwesome;
+}
+
+body.light .control {
+    background-color: #154f56;
+    color: #fff;
+}
+
+body.light .control::before {
+    content: "\f186";
+}
+
+body.light {
+    background-color: #ebf5fc;
+}
+
+body.light .container .card .box {
+    background-color: #ebf5fc;
+    border: none;
+}
+
+body.light .container .card .box .content h3 {
+    color: #32a3b1;
+}
+
+body.light .container .card .box .content h4 {
+    color: #32a3b1;
+}
+
+body.light .container .card .box .content ul {
+    color: #32a3b1;
+}
+
+/* asd */
+
+.container .card .box .content a:hover {
+    background-color: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr), 0 0 100px var(--clr);
+}
+
+.container .card .box .content a::before {
+    content: "";
+    position: absolute;
+    background-color: var(--clr);
+    height: 400%;
+    width: 20px;
+    animation: infinityRorate 3s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+
+.container .card .box .content a:hover:before {
+    width: 120%;
+}
+
+@keyframes infinityRorate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container .card .box .content a::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    /* background-color: #0e1538; */
+    background-color: #2a2b2f;
+    /*  */
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.container .card .box .content a:hover::after {
+    background-color: var(--clr);
+}
+
+.container .card .box .content span {
+    z-index: 1;
+}

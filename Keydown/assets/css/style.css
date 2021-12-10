@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7db892;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #cb356b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #bd3f32, #cb356b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #bd3f32,
+        #cb356b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Poppins";
+    color: #fff;
+}
+
+.alert {
+    font-size: 30px;
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+}
+
+.result {
+    width: 230px;
+    height: 230px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.detail {
+    display: flex;
+}
+
+.detail .card {
+    margin: 0 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card p {
+    width: 300px;
+    background-color: cadetblue;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.card p:last-child {
+    background-color: #fff;
+    color: black;
+}
+
+.hide {
+    display: none;
+}

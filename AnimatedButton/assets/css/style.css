@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7db892;
+}
+
+body {
+    height: 100vh;
+    background: #202329; /* fallback for old browsers */
+    font-family: "Poppins";
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-button {
+    padding: 20px 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.4s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+
+.animated-button:hover {
+    background-color: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr), 0 0 100px var(--clr);
+}
+
+.animated-button::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background-color: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+
+.animated-button:hover::before {
+    width: 120%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animated-button::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background-color: #0e1538;
+    transition: 0.5s;
+}
+
+.animated-button:hover::after {
+    background-color: var(--clr);
+}
+
+.animated-button span {
+    z-index: 1;
+    letter-spacing: 4px;
+    opacity: 0.5;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.animated-button:hover span {
+    opacity: 1;
+}

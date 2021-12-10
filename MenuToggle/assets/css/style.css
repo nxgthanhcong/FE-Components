@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7db892;
+}
+
+body {
+    height: 100vh;
+    background: #d3d7db; /* fallback for old browsers */
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #1863ff;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+
+.menu-toggle span:nth-child(1) {
+    transform: translateY(-15px);
+    width: 25px;
+    left: 15px;
+    transition-delay: 0.125s;
+}
+
+.menu-toggle span:nth-child(3) {
+    transform: translateY(15px);
+    width: 15px;
+    left: 15px;
+    transition-delay: 0.25s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+    width: 40px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    transform: translateX(60px) rotate(360deg);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(0) rotate(315deg);
+    width: 40px;
+}
