@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+:root {
+    --primary-color: #4daf54;
+    --indicator-navigation-item-edeg: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins";
+    background-color: #333;
+}
+
+.indicator-navigation {
+    position: relative;
+    width: calc(var(--indicator-navigation-item-edeg) * 5);
+    height: var(--indicator-navigation-item-edeg);
+}
+
+.indicator-navigation__list {
+    display: flex;
+    list-style: none;
+}
+
+.indicator-navigation__item {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.indicator-navigation__item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.indicator-navigation__icon {
+    /* position: relative; */
+    line-height: 70px;
+    transition: 0.5s;
+    font-size: 30px;
+}
+
+.indicator-navigation__item.active .indicator-navigation__icon {
+    transform: translateY(-10px);
+    font-size: 20px;
+}
+
+.indicator-navigation__text {
+    transition: 0.5s;
+    position: absolute;
+    bottom: 10px;
+    transition: 0.25s;
+    text-transform: uppercase;
+    transform: scale(0);
+    font-size: 12px;
+}
+
+.indicator-navigation__item:hover .indicator-navigation__text {
+    transform: scale(1);
+}
+
+.indicator {
+    position: absolute;
+    width: var(--indicator-navigation-item-edeg);
+    height: var(--indicator-navigation-item-edeg);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.indicator-navigation__item:nth-child(1).active ~ .indicator {
+    background-color: #f53b57;
+    box-shadow: 0 15px 25px #f53b5799;
+    transform: translateX(calc(var(--indicator-navigation-item-edeg) * 0));
+}
+
+.indicator-navigation__item:nth-child(2).active ~ .indicator {
+    background-color: #5d62fb;
+    box-shadow: 0 15px 25px #5d62fb99;
+    transform: translateX(calc(var(--indicator-navigation-item-edeg) * 1));
+}
+
+.indicator-navigation__item:nth-child(3).active ~ .indicator {
+    background-color: #05c56b;
+    box-shadow: 0 15px 25px #05c56b99;
+    transform: translateX(calc(var(--indicator-navigation-item-edeg) * 2));
+}
+
+.indicator-navigation__item:nth-child(4).active ~ .indicator {
+    background-color: #0fbcf9;
+    box-shadow: 0 15px 25px #0fbcf999;
+    transform: translateX(calc(var(--indicator-navigation-item-edeg) * 3));
+}
+
+.indicator-navigation__item:nth-child(5).active ~ .indicator {
+    background-color: #ffa801;
+    box-shadow: 0 15px 25px #ffa80199;
+    transform: translateX(calc(var(--indicator-navigation-item-edeg) * 4));
+}

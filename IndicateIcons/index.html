@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.0/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="indicator-navigation">
+        <ul class="indicator-navigation__list">
+            <li class="indicator-navigation__item">
+                <a href="">
+                    <span class="indicator-navigation__icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="indicator-navigation__text">Home</span>
+                </a>
+            </li>
+            <li class="indicator-navigation__item">
+                <a href="">
+                    <span class="indicator-navigation__icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="indicator-navigation__text">Profile</span>
+                </a>
+            </li>
+            <li class="indicator-navigation__item">
+                <a href="">
+                    <span class="indicator-navigation__icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                    </span>
+                    <span class="indicator-navigation__text">Help</span>
+                </a>
+            </li>
+            <li class="indicator-navigation__item">
+                <a href="">
+                    <span class="indicator-navigation__icon">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </span>
+                    <span class="indicator-navigation__text">Message</span>
+                </a>
+            </li>
+            <li class="indicator-navigation__item">
+                <a href="">
+                    <span class="indicator-navigation__icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="indicator-navigation__text">Settings</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <script>
+        var eIndicatorNavigationItems = document.querySelectorAll(".indicator-navigation__item");
+        eIndicatorNavigationItems.forEach(item => {
+            item.addEventListener("mouseover", () => {
+                item.classList.add("active");
+            })
+            item.addEventListener("mouseleave", () => {
+                item.classList.remove("active");
+            })
+        })
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
