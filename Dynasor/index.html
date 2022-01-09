@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #dinasor-game {
+            width: 70vw;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        #dinasor {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 150px;
+            background-image: url("./trex.png");
+            background-position: center;
+        }
+
+        #tree {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 150px;
+            left: 480px;
+            animation: tree linear 1s infinite;
+            background-image: url("./tree.png");
+            background-position: center;
+        }
+
+        @keyframes tree {
+            0% {
+                left: 480px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dinasor-game">
+        <div id="dinasor"></div>
+        <div id="tree"></div>
+    </div>
+</body>
+
+</html>
