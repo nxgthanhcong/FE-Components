@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    /* display: flex; */
+}
+
+.sidebar {
+    width: 320px;
+}
+
+.content {
+    flex: 1;
+}
+
+.item {
+    margin-top: 16px;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    min-height: 380px;
+    line-height: 380px;
+    background-color: brown;
+}
+
+@media (max-width: 1023px) {
+    .hide {
+        display: none;
+    }
+}
+
+
